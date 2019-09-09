@@ -36,6 +36,9 @@ export default {
   },
   activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivited () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
@@ -67,6 +70,7 @@ export default {
     top 0
     left 0
     right 0
+    z-index 2
     .header-fixed-back
       position absolute
       top 0
